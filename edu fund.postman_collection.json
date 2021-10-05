@@ -1,0 +1,115 @@
+{
+	"info": {
+		"_postman_id": "2580fca3-2ae7-4a14-b2a2-d22b6e1853ea",
+		"name": "edu fund",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get stock data",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiQURNSU4iLCJpYXQiOjE2MzM0MTkzOTEsImV4cCI6MTYzMzUwNTc5MX0.vs1hBjjUmLQZyU2OYqFsZeHkebLjNk-3otJ96voYL5w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3032/api/etfs/ACSI",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3032",
+					"path": [
+						"api",
+						"etfs",
+						"ACSI"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get stocks name",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3032/api/symbol/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3032",
+					"path": [
+						"api",
+						"symbol",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\":\"apikey\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://agile-earth-47190.herokuapp.com/api/login",
+					"protocol": "https",
+					"host": [
+						"agile-earth-47190",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
